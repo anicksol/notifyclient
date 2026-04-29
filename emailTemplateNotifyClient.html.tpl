@@ -52,14 +52,14 @@
                             <td style="width: 80%; height: auto;font-weight: 600; font-size: 28px; letter-spacing: -1.5px; color: #020D1D; min-width: 180px; text-align: left; height: auto;">
                                 <p class="first-block__title"
                                    style="font-weight: 600; font-size: 28px; letter-spacing: -1.5px; color: #020D1D; min-width: 180px; text-align: left; height: auto; margin: 0 5%;">
-                                    Call record </p>
+                                    SIP offline </p>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <br/>
-                <p class="mb-0">You have make call from {{ .Src }} to  {{ .Dst }} at {{ .Date }}.</p>
-                <p class="mb-0">In attachments you can find record of this call.</p>
+                <p class="mb-0">You have call from {{ .Src }} to  {{ .Dst }} at {{ .Date }}.</p>
+                <p class="mb-0">But your SIP was offline and call was failed.</p>
                 {{ if .IsError }}
                 <p><span class="star" style="color: #0066FF;">*</span>{{ .Error }}</p>
                 {{ end }}

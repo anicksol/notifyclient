@@ -104,7 +104,7 @@ func (m *EmailMessage) ToBytes() []byte {
 	return buf.Bytes()
 }
 
-func SendEmailCustomer(email, src, dst, attachmentPath string) error {
+func SendEmailCustomer(email, src, dst string) error {
 	sender := New()
 	ex, err := os.Executable()
 	if err != nil {
@@ -135,11 +135,10 @@ func SendEmailCustomer(email, src, dst, attachmentPath string) error {
 	m.To = []string{email}
 	m.CC = []string{}
 	m.BCC = []string{}
-	m.AttachFile(attachmentPath)
 	return sender.Send(m)
 }
 
-func SendEmailError(src, dst, attachmentPath, error string) error {
+func SendEmailError(email, src, dst, error string) error {
 	sender := New()
 	ex, err := os.Executable()
 	if err != nil {
@@ -165,10 +164,9 @@ func SendEmailError(src, dst, attachmentPath, error string) error {
 	}
 	body := bufBody.String()
 
-	m := NewMessage(fmt.Sprintf("Freezvon: AstAudio: error: Call from %s to %s", src, dst), body)
+	m := NewMessage(fmt.Sprintf("Freezvon: Call log: error: Call from %s to %s", src, dst), body)
 	m.To = []string{emailAdmin}
 	m.CC = []string{}
 	m.BCC = []string{}
-	m.AttachFile(attachmentPath)
 	return sender.Send(m)
 }
