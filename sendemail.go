@@ -82,7 +82,6 @@ func (m *EmailMessage) ToBytes() []byte {
 	} else {
 		buf.WriteString("Content-Type: text/html; charset=\"UTF-8\";\n\n")
 	}
-	buf.WriteString("Content-Type: text/html; charset=\"UTF-8\";\n\n")
 	//buf.WriteString(fmt.Sprintf("--%s\n", boundary))
 	buf.WriteString(m.Body)
 	if withAttachments {
