@@ -18,7 +18,7 @@
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body style="height: 100%; padding: 0; background-color: #E3E5F2; width: 100%; overflow-x: hidden; font-family: 'Inter', sans-serif; font-style: normal; font-weight: 500; font-size: 16px; line-height: 1.5; letter-spacing: -0.2px; text-align: left; ">
+<body style="height: 100%; padding: 0; background-color: #E3E5F2; width: 100%; overflow-x: hidden; font-family: Inter, sans-serif; font-style: normal; font-weight: 500; font-size: 16px; line-height: 1.5; letter-spacing: -0.2px; text-align: left; ">
 <div style="background-color: #E3E5F2; color: #343D4A;">
     <header style="position: relative; padding-top: 24px;">
         <div class="container" style="max-width: 640px; margin: auto;">
